@@ -1,0 +1,23 @@
+.character {
+  @apply max-w-7xl mx-auto;
+}
+
+.name {
+  @apply text-4xl font-semibold;
+}
+
+.image {
+  @apply w-96 h-96 object-cover object-top rounded-lg shadow-lg  mt-5;
+}
+
+.status {
+  @apply text-2xl text-gray-600;
+}
+
+.location {
+  @apply text-2xl text-gray-800;
+}
+
+.back {
+  @apply text-2xl text-blue-700 underline;
+}

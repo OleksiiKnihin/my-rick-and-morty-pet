@@ -1,0 +1,15 @@
+.characters {
+  @apply flex flex-wrap max-w-7xl justify-center my-0 mx-auto mt-32;
+}
+
+.item {
+  @apply cursor-pointer my-5 relative overflow-hidden shadow-lg rounded-lg mx-2;
+}
+
+.itemContent {
+  @apply absolute bottom-0 flex w-full text-3xl px-3 bg-gradient-to-t from-black to-transparent text-white py-5;
+}
+
+.itemImage {
+  @apply hover:scale-110 transition-all duration-700 ease-in-out;
+}

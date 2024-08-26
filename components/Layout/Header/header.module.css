@@ -1,0 +1,3 @@
+.header {
+  @apply flex justify-between py-3 px-5;
+}
