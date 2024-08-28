@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./characters.module.css";
 import Item from "./Item";
-import { Person } from "@/types/Character";
+import { Person } from "../../types/Character";
 
 interface Props {
   characters: Person[];

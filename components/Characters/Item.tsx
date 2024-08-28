@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "./characters.module.css";
-import { Person } from "@/types/Character";
+import { Person } from "../../types/Character";
 
 interface Props {
   character: Person;
