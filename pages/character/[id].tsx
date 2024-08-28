@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./character.module.css";
 import { GetStaticProps } from "next";
-import { Person } from "@/types/Character";
+import { Person } from "../../types/Character";
 
 interface Props {
   character: Person;
