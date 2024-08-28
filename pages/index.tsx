@@ -2,8 +2,13 @@ import React from "react";
 import Characters from "../components/Characters";
 
 import styles from "./index.module.css";
+import { Person } from "@/types/Character";
 
-const index = ({ data }) => {
+interface Props {
+  data: Person[];
+}
+
+const Index: React.FC<Props> = ({ data }) => {
   return (
     <div className="">
       <h1 className={styles.title}>Rick and Morty</h1>
@@ -22,4 +27,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default index;
+export default Index;

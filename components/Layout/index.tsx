@@ -1,11 +1,14 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 
-// styels
 import styles from "./layout.module.css";
 
-const Layout = ({ children }) => {
+interface Props {
+  children: ReactNode;
+}
+
+const Layout: React.FC<Props> = ({ children }) => {
   return (
     <div className={styles.layout}>
       <Header />

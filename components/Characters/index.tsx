@@ -2,8 +2,13 @@ import React from "react";
 
 import styles from "./characters.module.css";
 import Item from "./Item";
+import { Person } from "@/types/Character";
 
-const Characters = ({ characters }) => {
+interface Props {
+  characters: Person[];
+}
+
+const Characters: React.FC<Props> = ({ characters }) => {
   return (
     <div>
       <ul className={styles.characters}>

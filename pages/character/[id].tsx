@@ -2,8 +2,14 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import styles from "./character.module.css";
+import { GetStaticProps } from "next";
+import { Person } from "@/types/Character";
 
-const Character = ({ character }) => {
+interface Props {
+  character: Person;
+}
+
+const Character: React.FC<Props> = ({ character }) => {
   return (
     <div className={styles.character}>
       <Link href="/" className={styles.back}>
@@ -26,17 +32,17 @@ const Character = ({ character }) => {
 export const getStaticPaths = async () => {
   const res = await fetch("https://rickandmortyapi.com/api/character/");
   const data = await res.json();
-  const paths = data.results.map((character) => ({
+  const paths = data.results.map((character: Person) => ({
     params: { id: character.id.toString() },
   }));
   return { paths, fallback: false };
 };
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const res = await fetch(
-    "https://rickandmortyapi.com/api/character/" + params.id
+    "https://rickandmortyapi.com/api/character/" + params?.id
   );
-  const data = await res.json();
+  const data: Person = await res.json();
   return {
     props: {
       character: data,
